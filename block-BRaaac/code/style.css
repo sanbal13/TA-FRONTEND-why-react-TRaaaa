@@ -1,0 +1,98 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*************************** Custom Styles begins here ********************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    background-color: brown;
+}
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: 5rem auto;
+    padding: 1rem;
+    background: linear-gradient(blue, pink);
+}
+
+li {
+    padding: 1rem;
+    border-bottom: 2px solid brown;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background: linear-gradient(rgb(163, 230, 57), orange);
+    padding: .5rem;
+    color: rgb(19, 18, 18);
+    font-weight: 700;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin: .5rem;
+    font-size: 1.2rem;
+}
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgb(214, 214, 14);
+}
+
