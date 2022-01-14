@@ -48,8 +48,9 @@
         }
       });
 
-      function handleChange(event) {
+      function handleChange(event) {        
         let id = event.target.id;
+        console.log('inside handleChange', id);
         allMovies[id].watched = !allMovies[id].watched;
         localStorage.setItem('allMovies', JSON.stringify(allMovies));
         createMovieUI(allMovies, rootElm);
@@ -60,7 +61,7 @@
           const li = (
             <li>
               <label for="i">{movie.name}</label>
-              <button id="i" onClick={handleChange}>
+              <button id={i} onClick={handleChange}>
                 {movie.watched ? 'Watched' : 'To watch'}
               </button>
             </li>
