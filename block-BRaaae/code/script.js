@@ -53,9 +53,10 @@ function createMovieUI(data, root) {
       'li',
       {},
       React.createElement('label', { for: i }, movie.name),
-      React.createElement('button', { id: i, onclick: handleChange }, 
+      React.createElement('button', { id: i, onClick: handleChange }, 
                               movie.watched ? 'Watched' : 'To watch')
     );
+    return li;
   });
   ReactDOM.render(allLi, root);
 }
