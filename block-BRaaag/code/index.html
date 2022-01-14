@@ -60,7 +60,7 @@
         let allLi = data.map((movie, i) => {
           const li = (
             <li>
-              <label for="i">{movie.name}</label>
+              <label htmlFor="i">{movie.name}</label>
               <button id={i} onClick={handleChange}>
                 {movie.watched ? 'Watched' : 'To watch'}
               </button>
