@@ -59,7 +59,7 @@
       function createMovieUI(data, root) {
         let allLi = data.map((movie, i) => {
           const li = (
-            <li>
+            <li key={i}>
               <label htmlFor="i">{movie.name}</label>
               <button id={i} onClick={handleChange}>
                 {movie.watched ? 'Watched' : 'To watch'}
