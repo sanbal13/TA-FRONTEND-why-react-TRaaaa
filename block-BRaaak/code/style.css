@@ -81,6 +81,8 @@ a {
 .flex {
     display: flex;
     justify-content: space-between;
+}
+.align-center {
     align-items: center;
 }
 .flex-start {
@@ -92,6 +94,12 @@ a {
 }
 .column {
     flex-direction: column;
+}
+.width-30 {
+    width: 30%;
+}
+.padding-2rem {
+    padding: 2rem;
 }
 
 /************** Headings **************/
@@ -134,7 +142,7 @@ h3 {
 }
 .date {
     top: 20px;
-    right: 20px; 
+    right: 30px; 
     width: 7rem;
     height: 7rem;
     border-radius: 50rem;   

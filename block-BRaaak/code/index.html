@@ -37,7 +37,7 @@
   </head>
   <body>
       <h1>All Articles</h1>
-    <div class`="heading-description">Collection of best articles on Startups</div>
+    <div class="heading-description">Collection of best articles on Startups</div>
     <div id="root"></div>
     <script type="text/babel">
 
@@ -110,29 +110,29 @@
       }
       let Article = (props) => {     
         return (
-        <article>
+        <article className ="width-30">
           <div className="container">
             <div className="image" style={{ backgroundColor: 'blue' }}>
-              <img src={props.imageURL} alt="desert" />
-              <div className="date flex column justify-center">
-                <div className="number">{props.date.getDate()}</div>
-                <div className="month">{months[props.date.getMonth()]}</div>
+              <img src={props.articleDetails.imageURL} alt="desert" />
+              <div className="date flex column justify-center align-center">
+                <div className="number">{props.articleDetails.date.getDate()}</div>
+                <div className="month">{months[props.articleDetails.date.getMonth()]}</div>
               </div>
-              <span className="category">{props.category}</span>
+              <span className="category">{props.articleDetails.category}</span>
             </div>
             <div className="margin-left padding-top-bottom">
-              <h2>{props.title}</h2>
-              <h3 className="subTitle">{props.subTitle}</h3>
+              <h2>{props.articleDetails.title}</h2>
+              <h3 className="subTitle">{props.articleDetails.subTitle}</h3>
               <div className="description padding-top-bottom">
-                {props.description}
+                {props.articleDetails.description}
               </div>
               <div className="flex flex-start">
                 <div className="how-old">
-                  {dateDifference(new Date() - props.date)}
+                  {dateDifference(new Date() - props.articleDetails.date)}
                 </div>
                 <div className="comments">
                   <i className="fas fa-comments"></i>
-                  {' ' + props.comments + ' comments'}
+                  {' ' + props.articleDetails.comments + ' comments'}
                 </div>
               </div>
             </div>
@@ -140,22 +140,24 @@
         </article>
       );}
 
-      let articles = 
-        <div className="flex">
-        {data.map((article) => {            
-          <Article
-            title={article.title}
-            date={article.date}
-            comments={article.comments}
-            subTitle={article.subTitle}
-            description={article.description}
-            category={article.category}
-            imageURL={article.imageURL}
-          />
-        })}
-        </div>
+    
 
-      ReactDOM.render(articles, document.getElementById('root'));
+      function Articles() {
+          return data.map((article) =>  <Article          
+            articleDetails = {article}
+          />     
+          )       
+      }
+
+      function Flex() {
+          return (
+              <div className="flex padding-2rem">
+                <Articles />
+              </div>
+          )
+      }
+
+      ReactDOM.render(<Flex />, document.getElementById('root'));
     </script>
   </body>
 </html>
